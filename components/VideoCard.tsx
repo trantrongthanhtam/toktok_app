@@ -20,7 +20,6 @@ const VideoCard: NextPage<IProps> = ({ post: { caption, postedBy, video, _id, li
       <div className='flex flex-col border-b-2 border-gray-200 pb-6 md:pl-6'>
         <div>
           <div className='flex gap-3 p-2 cursor-pointer font-semibold rounded '>
-            
             <div>
               <Link href={`/detail/${_id}`}>
                 <p className='mt-2 font-normal '>{caption}</p>
@@ -38,7 +37,7 @@ const VideoCard: NextPage<IProps> = ({ post: { caption, postedBy, video, _id, li
                 loop
                 controls
                 src={video.asset.url}
-                className='lg:w-[700px] h-[300px] md:h-[400px] lg:h-[528px] w-[270px] rounded-2xl cursor-pointer bg-gray-100'
+                className='lg:w-[700px] h-[300px] md:h-[400px] lg:h-[528px] w-full rounded-2xl cursor-pointer bg-gray-100'
               >Your browser does not support the video tag.</video>
             </Link>
           </div>
@@ -55,8 +54,8 @@ const VideoCard: NextPage<IProps> = ({ post: { caption, postedBy, video, _id, li
             <Link href={`/profile/${postedBy?._id}`}>
               <>
                 <Image
-                  width={1}
-                  height={1}
+                  width={50}
+                  height={50}
                   className=' rounded-full'
                   src={postedBy?.image}
                   alt='user-profile' 
@@ -65,7 +64,7 @@ const VideoCard: NextPage<IProps> = ({ post: { caption, postedBy, video, _id, li
               </>
             </Link>
           </div>
-          <div>
+          <div className='flex items-center md:block'>
             <Link href={`/profile/${postedBy?._id}`}>
               <div className='flex items-center gap-2'>
                 <p className='flex gap-2 items-center md:text-md font-bold text-primary'>
@@ -77,14 +76,16 @@ const VideoCard: NextPage<IProps> = ({ post: { caption, postedBy, video, _id, li
                 </p>
               </div>
             </Link>
+          </div>
+        </div>
+        <div className='pr-5 md:pl-5 mb-2'>
             <Link href={`/detail/${_id}`}>
               <p className='mt-2 font-normal '>{caption}</p>
             </Link>
-          </div>
         </div>
       </div>
 
-      <div className='lg:ml-20 flex gap-4 relative'>
+      <div className='lg:ml-3 flex relative'>
         <div
           className='rounded-3xl'
         >
@@ -93,7 +94,7 @@ const VideoCard: NextPage<IProps> = ({ post: { caption, postedBy, video, _id, li
               loop
               controls
               src={video.asset.url}
-              className='lg:w-[700px] h-[300px] md:h-[400px] lg:h-[528px] w-[270px] rounded-2xl cursor-pointer bg-gray-100'
+              className='w-[72vw] lg:w-[700px] h-[300px] md:h-[400px] lg:h-[528px] rounded-2xl cursor-pointer bg-gray-100'
             >Your browser does not support the video tag.</video>
           </Link>
         </div>
