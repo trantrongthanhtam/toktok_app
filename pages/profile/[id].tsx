@@ -53,11 +53,11 @@ const Profile = ({ data }: IProps) => {
                 </div>
             </div>
             <div>
-                <div className='flex gap-5 mb-10 mt-2 md:mt-4 border-b-2 border-gray-200 bg-white w-full'>
+                <div className='flex gap-5 mb-5 mt-2 md:mt-4 border-b-2 border-gray-200 bg-white w-full'>
                     <p className={`text-xl font-bold cursor-pointer mt-2 ${videos}`} onClick={()=>setShowUserVideos(true)} >Videos</p>
                     <p className={`text-xl font-bold cursor-pointer mt-2 ${likes}`} onClick={()=>setShowUserVideos(false)} >Likes</p>
                 </div>
-                <div className='flex gap-6 flex-wrap md:justify-center'>
+                <div className='flex flex-wrap md:justify-center'>
                     {videosList.length > 0 ? (
                         videosList.map((post:Video, idx:number) => (
                             <VideoCard post={post} key={idx} />

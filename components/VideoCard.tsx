@@ -15,9 +15,9 @@ const VideoCard: NextPage<IProps> = ({ post: { caption, postedBy, video, _id, li
 
   if(!isShowingOnHome) {
     return (
-      <div className='flex flex-col border-b-2 border-gray-200 pb-6 md:pl-6'>
+      <div className='flex flex-col border-b-2 border-gray-200 pb-6 md:pl-6 w-[100%]'>
         <div>
-          <div className='flex gap-3 p-2 cursor-pointer font-semibold rounded '>
+          <div className='p-2 cursor-pointer font-semibold rounded '>
             <div>
               <Link href={`/detail/${_id}`}>
                 <p className='mt-2 font-normal '>{caption}</p>
@@ -35,7 +35,7 @@ const VideoCard: NextPage<IProps> = ({ post: { caption, postedBy, video, _id, li
                 loop
                 controls
                 src={video.asset.url}
-                className='lg:w-[700px] h-[300px] md:h-[400px] lg:h-[528px] w-full rounded-2xl cursor-pointer bg-gray-100'
+                className='w-[75vw] lg:w-[700px] h-[300px] md:h-[400px] lg:h-[528px] rounded-2xl cursor-pointer bg-gray-100'
               >Your browser does not support the video tag.</video>
             </Link>
           </div>
@@ -47,7 +47,7 @@ const VideoCard: NextPage<IProps> = ({ post: { caption, postedBy, video, _id, li
   return (
     <div className='flex flex-col border-b-2 border-gray-200 pb-6 md:pl-6'>
       <div>
-        <div className='flex gap-3 p-2 cursor-pointer font-semibold rounded '>
+        <div className='flex gap-3 p-2 cursor-pointer font-semibold rounded'>
           <div className='md:w-16 md:h-16 w-10 h-10'>
             <Link href={`/profile/${postedBy?._id}`}>
               <>
