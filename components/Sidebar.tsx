@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
-import { NextPage } from 'next';
-import { useRouter } from 'next/router';
 import Link from 'next/link';
-import GoogleLogin from 'react-google-login';
 import { AiFillHome } from 'react-icons/ai';
 import { FaTimes, FaBars } from 'react-icons/fa'
 import Discover from './Discover';

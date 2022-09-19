@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { BsPlay } from 'react-icons/bs';
 import { GoVerified } from 'react-icons/go';
 
 import { Video } from './../types';
-import { BASE_URL } from '../utils';
 
 interface IProps {
   post: Video;
@@ -78,9 +76,9 @@ const VideoCard: NextPage<IProps> = ({ post: { caption, postedBy, video, _id, li
             </Link>
           </div>
         </div>
-        <div className='pr-5 md:pl-5 mb-2'>
+        <div className='cursor-pointer pr-5 md:pl-5 mb-2'>
             <Link href={`/detail/${_id}`}>
-              <p className='mt-2 font-normal '>{caption}</p>
+              <p className='mt-2 font-normal'>{caption}</p>
             </Link>
         </div>
       </div>

@@ -2,10 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React, { Dispatch, SetStateAction } from 'react'
 import { GoVerified } from 'react-icons/go'
-import { IoMdHeartEmpty } from 'react-icons/io'
 import useAuthStore from '../store/authStore'
 import { IUser } from '../types'
-import { BASE_URL } from '../utils'
 import NoResults from './NoResults'
 
 interface IProps {

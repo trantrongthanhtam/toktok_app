@@ -1,10 +1,9 @@
 import { useRouter } from 'next/router';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { GoVerified } from 'react-icons/go';
 import { FaTimes } from 'react-icons/fa'
-import { BsFillPlayFill } from 'react-icons/bs';
 
 import axios from 'axios';
 import { BASE_URL } from '../../utils';

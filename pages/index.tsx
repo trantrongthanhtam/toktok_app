@@ -1,4 +1,3 @@
-import type { NextPage } from 'next'
 import axios from 'axios';
 import VideoCard from '../components/VideoCard';
 import NoResults from '../components/NoResults';

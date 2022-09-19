@@ -9,8 +9,6 @@ import { BASE_URL } from '../../utils'
 import Link from 'next/link'
 import useAuthStore from '../../store/authStore'
 import { useRouter } from 'next/router'
-import { userCreatedPostsQuery } from '../../utils/queries'
-
 
 const Search = ({ videos }: { videos: Video[] }) => {
     const [isAccounts, setIsAccounts] = useState(false);
